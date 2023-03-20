@@ -1,0 +1,15 @@
+<div id="wrapper">
+  <div class="content-top">
+    <app-header [isLogged]="isLogged"></app-header>
+  </div>
+  <div class="wrapper-content">
+    <app-action-bar *ngIf="isLogged"></app-action-bar>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div class="loading" *ngIf="loading">
+  <p-progressSpinner></p-progressSpinner>
+</div>
+<p-toast [ngStyle]="{'position':'relative', 'z-index':'99999999'}" styleClass="pre-wrap-toast" position="top-right"></p-toast>
+<p-confirmDialog icon="pi pi-exclamation-triangle" key="deleteConfirm"></p-confirmDialog>
