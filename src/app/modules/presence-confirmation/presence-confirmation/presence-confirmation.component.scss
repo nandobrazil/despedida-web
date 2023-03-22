@@ -1,17 +1,40 @@
-.login {
+::ng-deep .login {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 2rem;
+  height: 100%;
+  .login-container {
+    display: flex;
+    justify-content: center;
+  }
   .form-container {
     max-width: 600px;
     .head {
       padding: 0.5rem;
       .icon {
         display: flex;
+        justify-content: space-between;
+        .label {
+          display: flex;
+        }
         .dot {
           line-height: 3.2rem;
           font-size: .5rem;
           text-indent: 0.3rem;
+        }
+        .date {
+          color: var(--text-color);
+          margin-top: 1rem;
+          i {
+            color: var(--prim-color);
+          }
+        }
+      }
+      .confirm {
+        width: 100%;
+        .p-togglebutton {
+          width: 100%;
+          box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
         }
       }
       .link {
@@ -26,11 +49,16 @@
   }
   .form-login {
     display: flex;
-    margin-top: 2rem;
+
+    .grid {
+      width: 100%;
+    }
     .input-content {
       background-color: var(--container-color);
       border-radius: 0.5rem;
       padding: 0.75rem 1rem 0.25rem;
+      box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+
       .input-label {
         font-size: var(--smaller-font-size);
         color: var(--text-color);
@@ -46,13 +74,41 @@
         padding: 0.25rem 0.5rem 0.5rem 0;
       }
     }
+    .escort-button {
+      width: 100%;
+      height: .5rem;
+
+    }
+  }
+
+  .clickable-gift {
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    i {
+      color: var(--prim-color);
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .form-container .head .icon {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+    }
   }
 }
 
 ::ng-deep .login {
   p-button  {
     width: 50%;
+
     .p-button {
+      box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
       width: 100%;
       background: var(--prim-color);
       border: 1px solid var(--prim-color);

@@ -1,0 +1,45 @@
+.app-confirmed {
+  text-align: center;
+  .container-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    i {
+      background-color: var(--prim-color);
+      border-radius: 50%;
+      padding: 1.5rem;
+      font-size: 3rem;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      color: #FFF;
+    }
+  }
+
+  .head {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    span {
+      color: var(--prim-color);
+      font-size: 1rem;
+    }
+  }
+
+  .date {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    margin-bottom: 20px;
+
+    .group {
+      display: flex;
+      i {
+        color: var(--prim-color);
+      }
+      span {
+        margin-left: .5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<div class="login">
+  <div class="login-container">
+    <div class="form-container">
+      <div class="head">
+        <div class="icon" tooltipPosition="top"
+          pTooltip="A data da despedida/chá de panela será no dia 08/04/2023 as 20h00">
+          <div class="label">
+            <h1>Confirme a sua presença</h1>
+            <i class="fa-solid fa-circle dot primary-color"></i>
+          </div>
+          <div class="date">
+            <span>
+              <i class="fa-solid fa-calendar"></i>
+              08 de abril de 2023
+            </span>
+            <span>
+              <i class="fa-solid fa-clock"></i>
+              20h00
+            </span>
+          </div>
+        </div>
+        <div class="confirm">
+          <p-toggleButton [(ngModel)]="euVou"
+            onLabel="Minha presença está confirmada" offLabel="Você irá comparecer?"
+            onIcon="pi pi-check" offIcon="pi pi-times"></p-toggleButton>
+        </div>
+      </div>
+      <div class="body">
+        <div class="form-login">
+          <div class="grid">
+            <div class="col-12" style="margin-top: 1rem">
+              <div class="input-content">
+                <label for="name" class="input-label">Nome</label>
+                <input type="text" [maxlength]="150" pInputText name="name" [(ngModel)]="name" class="input">
+              </div>
+            </div>
+            <div class="col-12" style="margin-top: 1rem">
+              <div class="input-content">
+                <label for="name" class="input-label">Quantos acompanhantes?</label>
+                <input type="number" pInputText name="name" [(ngModel)]="numberEscort" class="input">
+              </div>
+            </div>
+            <div class="col-12 flex justify-content-end" style="padding: 0 .5rem; margin-top: 1rem;">
+              <p-button label="Confirmar Presença" [ngStyle]="{'width': '100%'}"
+                icon="fa-solid fa-calendar" styleClass="p-button-md"
+                (click)="sendPresenceConfirmation()"></p-button>
+            </div>
+            <div class="col-12 mt-5">
+              <span class="clickable-gift">
+                Se você já confirmou sua presença, clique aqui para ver nossa sugestão de presente
+                <i class="fa-solid fa-heart"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

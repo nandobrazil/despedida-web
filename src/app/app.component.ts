@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from './shared/services/core/auth.service';
-import { ILoading, LoadingService } from './shared/services/core/loading.service';
+import { AuthService } from './shared/services/auth.service';
+import { LoadingService } from './shared/services/loading.service';
 
 @Component({
   selector: 'app-root',

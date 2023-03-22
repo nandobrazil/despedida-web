@@ -1,10 +1,101 @@
 @import url('./assets/scss/variables.scss');
 @import url('./assets/scss/hover-effects.scss');
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
-  background-color: #161616;
+  background: url('./assets/img/background-presence.JPG');
+  background-color: var(--background-wrapper-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
   font-size: 14px;
   color: #FFF;
+}
+
+.togglebutton-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+//   Toggle-button
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      &:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #303f9f;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #303f9f;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+    .mat-icon {
+      font-weight: bold;
+    }
+    i:first-of-type {
+      font-size: 1rem;
+      color: white;
+      position: absolute;
+      left: 2.5px;
+      top: 4px;
+    }
+    i:nth-of-type(2) {
+      font-size: 1rem;
+      color: white;
+      position: absolute;
+      right: 5px;
+      top: 4.5px;
+    }
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
 }
 
 /*==================== BASE ====================*/
@@ -227,6 +318,19 @@ ul {
       background: var(--container-color) !important;
     }
   }
+}
+
+.p-togglebutton.p-button.p-highlight {
+  background-color: var(--prim-color) !important;
+  border-color: var(--primDark-color) !important;
+  &:hover {
+    background-color: var(--primDark-color) !important;
+    border-color: var(--primDark-color) !important;
+  }
+}
+
+.p-button:focus {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--prim-color), 0 1px 2px 0 black !important;
 }
 
 

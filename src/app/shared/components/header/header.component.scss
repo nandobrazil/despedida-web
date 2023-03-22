@@ -10,11 +10,10 @@
   top: 0;
   z-index: 2;
   .left {
-    width: 250px;
     cursor: pointer;
-    .logo {
-      width: 13rem;
-      margin-top: -0.5rem;
+    h1 {
+      margin-left: 1rem;
+      white-space: nowrap;
     }
   }
   .middle {

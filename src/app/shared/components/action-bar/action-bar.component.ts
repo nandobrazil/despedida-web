@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { MenuItem } from 'primeng/api';
 import { Component, OnInit } from '@angular/core';
-import { BreadcrumbService } from '../../services/core/breadcrumb.service';
+import { BreadcrumbService } from '../../services/breadcrumb.service';
 
 @Component({
   selector: 'app-action-bar',

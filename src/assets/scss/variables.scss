@@ -28,6 +28,7 @@
     --container-color: #202020;
     --container-border-color: #1d1d1d;
     --container-border-radius: 1.5rem;
+    --background-wrapper-color: rgba(35, 35, 35, .9);
 
     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     --big-font-size: 2rem;
@@ -68,9 +69,10 @@ body.light-theme{
     --table-stripped: #F5F5F5;
     --text-color-table: #333;
     --container-color: #FFF;
-    --prim-color: #f2914e;
-    --primDark-color: #af6b3b;
+    --prim-color: #e76c6c;
+    --primDark-color: #e73636;
     --container-border-color: #ebecf0;
     --loading-background: rgba(0, 0, 0, 0.6);
     --separator-color: #f0f0f3;
+    --background-wrapper-color: rgba(255, 255, 255, 0.7);
 }

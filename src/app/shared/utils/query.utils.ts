@@ -1,10 +1,10 @@
 import * as qs from 'qs';
 import * as _ from 'lodash';
-import { IQueryOptions } from '../interfaces/core/IQueryOptions';
+import { IQueryOptions } from '../interfaces/IQueryOptions';
 
 export const PrepareHttpQuery = (options?: IQueryOptions, addQueryPrefix: boolean = true): string => {
   const query: any = {};
-  query.pageSize = _.get(options, 'pageSize', 15);
+  query.qtd = _.get(options, 'pageSize', 15);
   query.page = _.get(options, 'page', 1);
   query.order = _.get(options, 'order');
   const search = _.get(options, 'search', {});

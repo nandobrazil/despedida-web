@@ -16,6 +16,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { PasswordModule } from 'primeng/password';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 import localePt from '@angular/common/locales/pt';
 
 registerLocaleData(localePt);
@@ -38,7 +39,8 @@ registerLocaleData(localePt);
     ProgressSpinnerModule,
     ReactiveFormsModule,
     DropdownModule,
-    PasswordModule
+    PasswordModule,
+    ToggleButtonModule
   ],
   exports: [
     TableModule,
@@ -56,7 +58,8 @@ registerLocaleData(localePt);
     ProgressSpinnerModule,
     ReactiveFormsModule,
     DropdownModule,
-    PasswordModule
+    PasswordModule,
+    ToggleButtonModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' }

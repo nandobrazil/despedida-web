@@ -3,12 +3,12 @@ import { Inject } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import * as _ from 'lodash';
 import { ConfirmationService, MessageService, SelectItem } from 'primeng/api';
-import { IHttpResult } from '../../interfaces/core/IHttpResult';
 import { environment } from 'src/environments/environment';
-import { PrepareHttpQuery } from '../../utils/query.utils';
-import { IQueryOptions } from '../../interfaces/core/IQueryOptions';
-import { IResultPaginated } from '../../interfaces/core/IResultPaginated';
-import { ISelectItem } from '../../interfaces/core/ISelectItem';
+import { IHttpResult } from '../interfaces/IHttpResult';
+import { IQueryOptions } from '../interfaces/IQueryOptions';
+import { PrepareHttpQuery } from '../utils/query.utils';
+import { IResultPaginated } from '../interfaces/IResultPaginated';
+import { ISelectItem } from '../interfaces/ISelectItem';
 
 
 export abstract class BaseService<T> {

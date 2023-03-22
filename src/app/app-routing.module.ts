@@ -4,8 +4,17 @@ import { AuthGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'login',
-    loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
+    path: '',
+    redirectTo: 'presence-confirmation',
+    pathMatch: 'full'
+  },
+  {
+    path: 'presence-confirmation',
+    loadChildren: () => import('./modules/presence-confirmation/presence-confirmation.module').then(m => m.LoginModule)
+  },
+  {
+    path: 'confirmed',
+    loadChildren: () => import('./modules/confirmed/confirmed.module').then(m => m.ConfirmedModule),
   }
 ];
 

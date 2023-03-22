@@ -14,7 +14,7 @@ import { MessageService } from 'primeng/api';
 import * as _ from 'lodash';
 
 import { Router } from '@angular/router';
-import { LoadingService } from '../services/core/loading.service';
+import { LoadingService } from '../services/loading.service';
 
 @Injectable()
 export class HttpRequestInterceptor implements HttpInterceptor {
@@ -35,6 +35,8 @@ intercept(
         ... { 'Content-Type': 'application/json' }
       });
     this.loadingService.setLoading(true);
+    console.log('req', req);
+
     req = req.clone({ headers });
     return next.handle(req).pipe(
       map((event: HttpEvent<any>) => {
