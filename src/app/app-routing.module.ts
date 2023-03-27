@@ -15,7 +15,15 @@ const routes: Routes = [
   {
     path: 'confirmed',
     loadChildren: () => import('./modules/confirmed/confirmed.module').then(m => m.ConfirmedModule),
-  }
+  },
+  {
+    path: 'gift',
+    loadChildren: () => import('./modules/gift-suggestion/gift-suggestion.module').then(m => m.GiftSuggestionModule),
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule),
+  },
 ];
 
 @NgModule({

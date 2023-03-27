@@ -19,7 +19,7 @@ export class AuthService {
 
   signIn() {
     localStorage.setItem(StorageKeys.ACCESS_TOKEN, 'MOCK-JWT-TOKEN');
-    location.reload();
+    this.router.navigate(['/admin/panel']);
   }
 
   signOut() {

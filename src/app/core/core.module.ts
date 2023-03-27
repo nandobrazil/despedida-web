@@ -18,6 +18,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { PasswordModule } from 'primeng/password';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import localePt from '@angular/common/locales/pt';
+import { ClipboardModule } from 'ngx-clipboard';
 
 registerLocaleData(localePt);
 
@@ -40,7 +41,8 @@ registerLocaleData(localePt);
     ReactiveFormsModule,
     DropdownModule,
     PasswordModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    ClipboardModule
   ],
   exports: [
     TableModule,
@@ -59,7 +61,8 @@ registerLocaleData(localePt);
     ReactiveFormsModule,
     DropdownModule,
     PasswordModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    ClipboardModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' }

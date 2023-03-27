@@ -1,0 +1,29 @@
+<div class="login">
+  <div class="login-container">
+    <div class="form-container">
+      <div class="body">
+        <div class="form-login">
+          <div class="grid">
+            <div class="col-12" style="margin-top: 1rem">
+              <div class="input-content">
+                <label for="name" class="input-label">Usuário</label>
+                <input type="text" pInputText name="name" [(ngModel)]="user" class="input">
+              </div>
+            </div>
+            <div class="col-12" style="margin-top: 1rem">
+              <div class="input-content">
+                <label for="pass" class="input-label">Senha</label>
+                <input type="password" pInputText name="pass" [(ngModel)]="pass" class="input">
+              </div>
+            </div>
+            <div class="col-12 flex justify-content-end" style="padding: 0 .5rem; margin-top: 1rem;">
+              <p-button label="Logar-se" [ngStyle]="{'width': '100%'}"
+                icon="fa-solid fa-lock" styleClass="p-button-md"
+                (click)="logIn()"></p-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

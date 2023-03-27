@@ -1,0 +1,35 @@
+<div class="app-gift">
+  <div class="container container-wrapper">
+    <h1>Nos presenteie <i class="fas fa-heart"></i></h1>
+
+    <div class="container-suggestion">
+      <h3><i class="fa-sharp fa-solid fa-car"></i> Por estarmos de mudança para uma nova cidade a nossa sugestão de presente é um pix para gente comprar lá o que precisarmos!</h3>
+      <h3><i class="fa-brands fa-pix"></i> O PIX é do valor que desejar nos presentear, no final da página colocamos links para pagamento com cartão de crédito e precisamos colocar um valor pré-fixado, tudo bem?</h3>
+      <span><i class="fa-solid fa-gift"></i> Caso queira nos presentear com utensílios de casa em geral, enviar para o nosso novo endereço:</span>
+      <span><i class="fa-solid fa-location-dot"></i> Rua Natal, 640, Cajuru, CEP 82.920-000 Curitiba - PR</span>
+    </div>
+    <div class="container-pix">
+      <span>Pix via QR Code</span>
+      <img src="./assets/img/qrcodepix.png" alt="">
+    </div>
+
+    <div class="container-input" *ngFor="let item of pix; let i = index">
+      <label for="pix">{{item.label}}</label>
+      <div class="input-group">
+        <input type="text" pInputText name="pix" [value]="item.value" readonly #inputTarget />
+        <button pButton (click)="copied(i)" [icon]="item.icon" [label]="item.text" [ngxClipboard]="inputTarget"></button>
+      </div>
+      <span class="smaller">{{item.containfo}}</span>
+    </div>
+
+    <div class="container-links">
+      <h3>Se preferir passar um presente por cartão de crédito e parcelar, geramos possíveis links de valores já fixos <i class="fa-regular fa-face-smile"></i></h3>
+      <div class="container-link" *ngFor="let item of links; let i = index">
+        <a href="{{item.link}}" target="_blank">
+          <i class="fa-solid fa-sack-dollar"></i>
+          {{item.label}}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

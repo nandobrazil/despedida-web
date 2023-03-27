@@ -1,0 +1,19 @@
+<div class="app-panel">
+  <h2>Total de Confirmados: {{totalRecords}}</h2>
+  <h2>Total de Acompanhantes: {{totalAcompanhantes}}</h2>
+  <p-table [value]="pessoasConfirmadasList"
+    [paginator]="true" [rows]="10" [totalRecords]="totalRecords">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>Acompanhantes</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-pessoa>
+        <tr>
+          <td>{{ pessoa.nome }}</td>
+          <td>{{ pessoa.quantidade_acompanhantes }}</td>
+        </tr>
+    </ng-template>
+</p-table>
+</div>

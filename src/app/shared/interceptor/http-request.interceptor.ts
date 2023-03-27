@@ -35,8 +35,6 @@ intercept(
         ... { 'Content-Type': 'application/json' }
       });
     this.loadingService.setLoading(true);
-    console.log('req', req);
-
     req = req.clone({ headers });
     return next.handle(req).pipe(
       map((event: HttpEvent<any>) => {
